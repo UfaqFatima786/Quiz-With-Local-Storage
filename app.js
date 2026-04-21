@@ -9,7 +9,13 @@ function login() {
 
         var quizWindow = window.open("quiz.html", "_blank", "width=600,height=600");
     } else {
-        alert("Invalid Login");
+        // alert("Invalid email or password. Please try again.");
+        Swal.fire({
+            title: 'Error!',
+            text: 'Invalid email or password. Please try again.',
+            icon: 'error',
+            confirmButtonText: 'OK'
+        });
     }
 }
 
@@ -28,8 +34,9 @@ function signup() {
         text: 'Thanks for signing up 😊',
         icon: 'success',
         confirmButtonText: 'OK'
+    }).then(() => {
+        window.location.href = "index.html";
     });
-    window.location.href = "index.html";
 }
 
 var quizQuestion = [
@@ -60,7 +67,7 @@ if (quizContainer) {
 
     function render() {
 
-        var option = document.getElementsByName("option");
+        var option = document.getElementsByName("answers");
         for (var i = 0; i < option.length; i++) {
             if (option[i].checked) {
                 if (Number(option[i].value) === quizQuestion[index - 1].answer) {
@@ -73,11 +80,11 @@ if (quizContainer) {
 
             var percentage = (score / quizQuestion.length) * 100;
 
-            var resultWindow = window.open("", "_blank", "width=600,height=600");
+            var resultWindow = window.open("", "_blank", "width=800,height=600 margin-left=100" );
 
             resultWindow.document.write(`
            
-    <h2>🎉 Quiz Finished!</h2>
+    <h2>🎉 Quiz Completed!</h2>
     <p class="score">Score: ${score} / ${quizQuestion.length}</p>
     <p class="percentage">Percentage: ${percentage}%</p>
 </div>

@@ -1,6 +1,9 @@
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  background-image: url("./images/zenaga-bird-7914702_1920.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   margin: 0;
   padding: 0;
   display: flex;
@@ -9,14 +12,14 @@ body {
   height: 100vh;
 }
 
-
 .container {
-  background: white;
+  background: rgba(128, 126, 126, 0.575);
   padding: 30px;
   border-radius: 15px;
-  width: 320px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  width: 450px;
+  box-shadow: 0 10px 25px rgba(25, 0, 255, 0.2);
   text-align: center;
+  
 }
 
 h2 {
