@@ -28,7 +28,6 @@ function signup() {
 
     localStorage.setItem("email", email);
     localStorage.setItem("password", password);
-    // alert("Signup Successful! Thanks for signing up 😊");
     Swal.fire({
         title: 'Signup Hogaya Hurray!',
         text: 'Signup k lie shukriya 😊',
@@ -41,22 +40,56 @@ function signup() {
 
 var quizQuestion = [
     {
-        question: "What is the capital of Pakistan?",
+        question: "Which mountain is the highest peak in Pakistan?",
+        options: [" Nanga Parbat", " K2", " Rakaposhi", " Tirich Mir"],
+        answer: "B) K2",
+    },
+    {
+        question: "Which city is known as the 'City of Lights' in Pakistan?",
         options: ["Karachi", "Lahore", "Islamabad", "Peshawar"],
-        answer: 2,
+        answer: "A) Karachi",
     },
     {
-        question: "Which language is used for web styling?",
-        options: ["HTML", "CSS", "Python", "C++"],
-        answer: 1,
+        question: "Which river is the longest in Pakistan?",
+        options: ["Indus", "Jhelum", "Chenab", "Sutlej"],
+        answer: "A) Indus",
     },
     {
-        question: "Which company developed JavaScript?",
-        options: ["Microsoft", "Netscape", "Google", "IBM"],
-        answer: 1,
+        question: "Which is the national sport of Pakistan?",
+        options: ["Cricket", "Hockey", "Football", "Squash"],
+        answer: "B) Hockey",
     },
+    {
+        question: "Which is the largest desert in Pakistan?",
+        options: ["Thar Desert", "Cholistan Desert", "Kharan Desert", "Rann of Kutch"],
+        answer: "A) Thar Desert",
+    },
+    {
+        question: "Which is the national animal of Pakistan?",
+        options: ["Markhor", "Snow Leopard", "Chinkara", "Indus Dolphin"],
+        answer: "A) Markhor",
+    },
+    {
+        question: "Which is the national flower of Pakistan?",
+        options: ["Rose", "Jasmine", "Sunflower", "Lily"],
+        answer: "B) Jasmine",
+    },
+    {
+        question: "Which is the national bird of Pakistan?",
+        options: ["Chukar Partridge", "Peacock", "Sparrow", "Eagle"],
+        answer: "A) Chukar Partridge",
+    },
+    {
+        question: "Which is the national fruit of Pakistan?",
+        options: ["Mango", "Apple", "Banana", "Orange"],
+        answer: "A) Mango",
+    },
+    {
+        question: "Which is the national tree of Pakistan?",
+        options: ["Deodar", "Pine", "Banyan", "Neem"],
+        answer: "A) Deodar",
+    }
 ];
-
 var index = 0;
 var score = 0;
 
@@ -101,7 +134,7 @@ if (quizContainer) {
 
         var q = quizQuestion[index];
 
-        var html = `<h2>${q.question}</h2>`;
+        var html = `<h2 class="quizQuestion">${q.question}</h2>`;
 
         q.options.forEach((opt, i) => {
             html += `

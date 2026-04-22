@@ -93,9 +93,16 @@ input[type="radio"] {
 }
 
 
+label {
+  color: black;
+  font-weight: 30px;
+  display: block;
+}
+
+
 .result {
   text-align: center;
-  font-size: 18px;
+  font-size: 25px;
 }
 
 .card{
@@ -121,10 +128,14 @@ p{
 .score{
     font-size:22px;
     font-weight:bold;
-    color:#4facfe;
+    color:#6901019f;
 }
 
 .percentage{
     font-size:20px;
-    color:#28a745;
+    color:#532727bd;
+}
+.quizQuestion {
+    color: #0e0000;  
+    font-size: 35px;
 }
