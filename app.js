@@ -30,8 +30,8 @@ function signup() {
     localStorage.setItem("password", password);
     // alert("Signup Successful! Thanks for signing up 😊");
     Swal.fire({
-        title: 'Signup Successful!',
-        text: 'Thanks for signing up 😊',
+        title: 'Signup Hogaya Hurray!',
+        text: 'Signup k lie shukriya 😊',
         icon: 'success',
         confirmButtonText: 'OK'
     }).then(() => {
