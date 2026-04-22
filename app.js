@@ -42,52 +42,52 @@ var quizQuestion = [
     {
         question: "Which mountain is the highest peak in Pakistan?",
         options: [" Nanga Parbat", " K2", " Rakaposhi", " Tirich Mir"],
-        answer: "B) K2",
+        answer: 1,
     },
     {
         question: "Which city is known as the 'City of Lights' in Pakistan?",
         options: ["Karachi", "Lahore", "Islamabad", "Peshawar"],
-        answer: "A) Karachi",
+        answer: 0,
     },
     {
         question: "Which river is the longest in Pakistan?",
         options: ["Indus", "Jhelum", "Chenab", "Sutlej"],
-        answer: "A) Indus",
+        answer: 0,
     },
     {
         question: "Which is the national sport of Pakistan?",
         options: ["Cricket", "Hockey", "Football", "Squash"],
-        answer: "B) Hockey",
+        answer: 1,
     },
     {
         question: "Which is the largest desert in Pakistan?",
         options: ["Thar Desert", "Cholistan Desert", "Kharan Desert", "Rann of Kutch"],
-        answer: "A) Thar Desert",
+        answer: 0,
     },
     {
         question: "Which is the national animal of Pakistan?",
         options: ["Markhor", "Snow Leopard", "Chinkara", "Indus Dolphin"],
-        answer: "A) Markhor",
+        answer: 0,
     },
     {
         question: "Which is the national flower of Pakistan?",
         options: ["Rose", "Jasmine", "Sunflower", "Lily"],
-        answer: "B) Jasmine",
+        answer: 1,
     },
     {
         question: "Which is the national bird of Pakistan?",
         options: ["Chukar Partridge", "Peacock", "Sparrow", "Eagle"],
-        answer: "A) Chukar Partridge",
+        answer: 0,
     },
     {
         question: "Which is the national fruit of Pakistan?",
         options: ["Mango", "Apple", "Banana", "Orange"],
-        answer: "A) Mango",
+        answer: 0,
     },
     {
         question: "Which is the national tree of Pakistan?",
         options: ["Deodar", "Pine", "Banyan", "Neem"],
-        answer: "A) Deodar",
+        answer: 0,
     }
 ];
 var index = 0;
@@ -100,26 +100,25 @@ if (quizContainer) {
 
     function render() {
 
-        var option = document.getElementsByName("answers");
-        for (var i = 0; i < option.length; i++) {
+var option = document.getElementsByName("option");       
+ for (var i = 0; i < option.length; i++) {
             if (option[i].checked) {
                 if (Number(option[i].value) === quizQuestion[index - 1].answer) {
                     score++;
                 }
             }
         }
-
         if (!quizQuestion[index]) {
 
-            var percentage = (score / quizQuestion.length) * 100;
+var percentage = Math.round((score / quizQuestion.length) * 100);            
 
             var resultWindow = window.open("", "_blank", "width=800,height=600 margin-left=100" );
 
             resultWindow.document.write(`
            
-    <h2>🎉 Quiz Completed!</h2>
+    <h2>🎉 Mubarak ho bht bht dear !</h2>
     <p class="score">Score: ${score} / ${quizQuestion.length}</p>
-    <p class="percentage">Percentage: ${percentage}%</p>
+    <p class="percentage">Percentage Dekhlo Apni Mehnt ki: ${percentage}%</p>
 </div>
 
         `);
