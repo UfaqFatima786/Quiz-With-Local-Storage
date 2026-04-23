@@ -116,7 +116,7 @@ var percentage = Math.round((score / quizQuestion.length) * 100);
 
             resultWindow.document.write(`
            
-    <h2>🎉 Mubarak ho bht bht dear !</h2>
+    <h2>🎉 Mubarak ho bht bht dear Apko!</h2>
     <p class="score">Score: ${score} / ${quizQuestion.length}</p>
     <p class="percentage">Percentage Dekhlo Apni Mehnt ki: ${percentage}%</p>
 </div>
